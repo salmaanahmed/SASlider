@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@android:color/white"
-    tools:context="sasliderdemo.salmaan.ahmsal.com.sasliderdemo.salmaan.ahmsal.com.MainActivity">
+    tools:context="sasliderdemo.salmaan.ahmsal.com.MainActivity">
 
     <LinearLayout
         android:id="@+id/linearLayout"
@@ -20,7 +20,7 @@
             android:text="Slider below is added via xml"
             android:textSize="20sp" />
 
-        <sasliderdemo.salmaan.ahmsal.com.saslider.CustomSlider
+        <sasliderdemo.salmaan.ahmsal.com.saslider.SASlider
             android:layout_width="match_parent"
             android:layout_height="100dp"
             android:layout_marginBottom="50dp"

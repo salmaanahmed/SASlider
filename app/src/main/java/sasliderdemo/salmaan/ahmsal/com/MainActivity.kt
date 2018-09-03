@@ -4,8 +4,7 @@ import android.graphics.Color
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
 import kotlinx.android.synthetic.main.activity_main.*
-import sasliderdemo.salmaan.ahmsal.com.saslider.CustomSlider
-import sasliderdemo.salmaan.ahmsal.com.R
+import sasliderdemo.salmaan.ahmsal.com.saslider.SASlider
 
 class MainActivity : AppCompatActivity() {
 
@@ -14,7 +13,7 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
 
-        val slider = CustomSlider(this@MainActivity)
+        val slider = SASlider(this@MainActivity)
         slider.sliderColor = Color.BLUE
         slider.criticalColor = Color.BLACK
         slider.min = 0.0

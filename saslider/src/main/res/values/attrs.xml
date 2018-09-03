@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <declare-styleable name="CustomSlider">
+    <declare-styleable name="SASlider">
         <attr name="circleSize" format="dimension" />
         <attr name="minValue" format="float" />
         <attr name="maxValue" format="float" />

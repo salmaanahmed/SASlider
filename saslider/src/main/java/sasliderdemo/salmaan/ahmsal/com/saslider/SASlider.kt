@@ -20,7 +20,7 @@ import android.widget.LinearLayout
 import android.widget.TextView
 import com.wisemani.customview.CircleView
 import com.wisemani.patienttouch.customview.TriangleShapeView
-import kotlinx.android.synthetic.main.custom_slider.view.*
+import kotlinx.android.synthetic.main.sa_slider.view.*
 import java.math.RoundingMode
 import java.text.DecimalFormat
 import kotlin.math.roundToInt
@@ -28,7 +28,7 @@ import kotlin.math.roundToInt
 /**
  * Created by salmaanahmed on 20/07/2018.
  */
-class CustomSlider @JvmOverloads constructor(
+class SASlider @JvmOverloads constructor(
         context: Context, attrs: AttributeSet? = null, defStyleAttr: Int = 0
 ) : LinearLayout(context, attrs, defStyleAttr), ViewTreeObserver.OnScrollChangedListener {
 
@@ -95,25 +95,25 @@ class CustomSlider @JvmOverloads constructor(
         }
 
     init {
-        LayoutInflater.from(context).inflate(R.layout.custom_slider, this, true)
+        LayoutInflater.from(context).inflate(R.layout.sa_slider, this, true)
 
-            val typedArray = context.obtainStyledAttributes(attrs, R.styleable.CustomSlider, 0, 0)
-            sliderColor = typedArray.getColor(R.styleable.CustomSlider_sliderColor, Color.BLUE) // Set value from XML attributes or set default slider color
-            circleColor = typedArray.getColor(R.styleable.CustomSlider_circleColor, Color.GRAY) // Set value from XML attributes or set default circle/text color
-            criticalColor = typedArray.getColor(R.styleable.CustomSlider_criticalColor, Color.RED) // Set value from XML attributes or set default circle/text color
-            editTextColor = typedArray.getColor(R.styleable.CustomSlider_editTextBorderColor, Color.LTGRAY) // Set value from XML attributes or set default edit text color
-            circleWidth = typedArray.getDimensionPixelSize(R.styleable.CustomSlider_circleSize, resources.getDimension(R.dimen.circleSize).toInt()) // Set value from XML attributes or set default size of circle
+            val typedArray = context.obtainStyledAttributes(attrs, R.styleable.SASlider, 0, 0)
+            sliderColor = typedArray.getColor(R.styleable.SASlider_sliderColor, Color.BLUE) // Set value from XML attributes or set default slider color
+            circleColor = typedArray.getColor(R.styleable.SASlider_circleColor, Color.GRAY) // Set value from XML attributes or set default circle/text color
+            criticalColor = typedArray.getColor(R.styleable.SASlider_criticalColor, Color.RED) // Set value from XML attributes or set default circle/text color
+            editTextColor = typedArray.getColor(R.styleable.SASlider_editTextBorderColor, Color.LTGRAY) // Set value from XML attributes or set default edit text color
+            circleWidth = typedArray.getDimensionPixelSize(R.styleable.SASlider_circleSize, resources.getDimension(R.dimen.circleSize).toInt()) // Set value from XML attributes or set default size of circle
             bigCircleWidth = circleWidth * 2    // Big circle is twice the size of small circle
             thumbWidth = (bigCircleWidth * 3)   // Thumb should be large enough to be seen
             spaceSize = bigCircleWidth * 2      // Space is twice the size of big circle
             textViewSize = (spaceSize * 5) + (bigCircleWidth * 5)   // Text View is size of 5 circles and 5 spaces as text is displayed at every 5th circle
             spaceBetweenCircles = bigCircleWidth + spaceSize        // Space between center point is equal to two half big circles i.e. one big circle and size of space
-            isDecimal = typedArray.getBoolean(R.styleable.CustomSlider_isDecimal, false) // Set value from XML attributes or set default slider type
-            min = typedArray.getFloat(R.styleable.CustomSlider_minValue, 1.0f).toDouble().roundToOneDecimal()  // Set value from XML attributes or set default min value
-            max = typedArray.getFloat(R.styleable.CustomSlider_maxValue, 10.0f).toDouble().roundToOneDecimal()  // Set value from XML attributes or set default max value
-            upperThreshold = typedArray.getFloat(R.styleable.CustomSlider_upperThreshold, max.toFloat()).toDouble().roundToOneDecimal()  // Set value from XML attributes or set default threshold value
-            lowerThreshold = typedArray.getFloat(R.styleable.CustomSlider_lowerThreshold, min.toFloat()).toDouble().roundToOneDecimal()  // Set value from XML attributes or set default threshold value
-            default = typedArray.getFloat(R.styleable.CustomSlider_defaultValue, min.toFloat()).toDouble().roundToOneDecimal()  // Set value from XML attributes or set default value
+            isDecimal = typedArray.getBoolean(R.styleable.SASlider_isDecimal, false) // Set value from XML attributes or set default slider type
+            min = typedArray.getFloat(R.styleable.SASlider_minValue, 1.0f).toDouble().roundToOneDecimal()  // Set value from XML attributes or set default min value
+            max = typedArray.getFloat(R.styleable.SASlider_maxValue, 10.0f).toDouble().roundToOneDecimal()  // Set value from XML attributes or set default max value
+            upperThreshold = typedArray.getFloat(R.styleable.SASlider_upperThreshold, max.toFloat()).toDouble().roundToOneDecimal()  // Set value from XML attributes or set default threshold value
+            lowerThreshold = typedArray.getFloat(R.styleable.SASlider_lowerThreshold, min.toFloat()).toDouble().roundToOneDecimal()  // Set value from XML attributes or set default threshold value
+            default = typedArray.getFloat(R.styleable.SASlider_defaultValue, min.toFloat()).toDouble().roundToOneDecimal()  // Set value from XML attributes or set default value
     }
 
 
@@ -257,7 +257,7 @@ class CustomSlider @JvmOverloads constructor(
 
         frameEditText.setBackgroundColor(editTextColor)
 
-        var triangle = TriangleShapeView(context, editTextColor)
+        val triangle = TriangleShapeView(context, editTextColor)
         trLayout.addView(triangle)
         triangle.layoutParams.width = (bigCircleWidth * 1.25).toInt()
         triangle.layoutParams.height = (bigCircleWidth * 1.25).toInt()
@@ -360,7 +360,7 @@ class CustomSlider @JvmOverloads constructor(
      * Setup scroll listener
      */
     private fun setScrollListener() {
-        scrollView.viewTreeObserver.addOnScrollChangedListener(this@CustomSlider)
+        scrollView.viewTreeObserver.addOnScrollChangedListener(this@SASlider)
     }
 
     /**
@@ -368,7 +368,7 @@ class CustomSlider @JvmOverloads constructor(
      * Update edit text
      */
     override fun onScrollChanged() {
-        var value = getNumberFromPixel(scrollView.scrollX)
+        val value = getNumberFromPixel(scrollView.scrollX)
         if (isDecimal) editText.setTextProgrammatically((value).toString())
         else editText.setTextProgrammatically((value).roundToInt().toString())
         editText.setSelection(editText.text.count())
