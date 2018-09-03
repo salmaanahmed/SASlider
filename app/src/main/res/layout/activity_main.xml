@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    tools:context="sasliderdemo.salmaan.ahmsal.com.sasliderdemo.salmaan.ahmsal.com.MainActivity">
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            android:text="Slider below is added via xml"
+            android:textSize="20sp" />
+
+        <sasliderdemo.salmaan.ahmsal.com.saslider.CustomSlider
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:layout_marginBottom="50dp"
+            app:circleColor="@android:color/darker_gray"
+            app:defaultValue="150"
+            app:editTextBorderColor="@color/colorGrey"
+            app:isDecimal="false"
+            app:layout_constraintTop_toTopOf="parent"
+            app:maxValue="300"
+            app:minValue="0"
+            app:criticalColor="@color/darkRed"
+            app:upperThreshold="200"
+            app:lowerThreshold="100"
+            app:sliderColor="@color/darkGreen" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            android:text="Slider below is added programmatically"
+            android:textSize="20sp" />
+
+    </LinearLayout>
+</ScrollView>

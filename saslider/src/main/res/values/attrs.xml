@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="CustomSlider">
+        <attr name="circleSize" format="dimension" />
+        <attr name="minValue" format="float" />
+        <attr name="maxValue" format="float" />
+        <attr name="upperThreshold" format="float" />
+        <attr name="lowerThreshold" format="float" />
+        <attr name="defaultValue" format="float" />
+        <attr name="sliderColor" format="color" />
+        <attr name="criticalColor" format="color" />
+        <attr name="circleColor" format="color" />
+        <attr name="editTextBorderColor" format="color" />
+        <attr name="isDecimal" format="boolean" />
+    </declare-styleable>
+</resources>
