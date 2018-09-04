@@ -15,12 +15,10 @@ class MainActivity : AppCompatActivity() {
 
         val slider = SASlider(this@MainActivity)
         slider.sliderColor = Color.BLUE
-        slider.criticalColor = Color.BLACK
         slider.min = 0.0
         slider.max = 50.0
+        slider.criticalColor = Color.BLACK
         slider.isDecimal = true
         linearLayout.addView(slider)
-
-
     }
 }
