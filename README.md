@@ -56,7 +56,7 @@ If you prefer not to use either of the above mentioned dependency managers, you 
 
 # Getting Started
 # Using XML
-You can use expandable button in XML as following
+You can use SASlider in XML as following
 ```
 <sasliderdemo.salmaan.ahmsal.com.saslider.SASlider
     android:layout_width="match_parent"
@@ -99,4 +99,4 @@ slider.selectedIndex
 
 Pull requests are welcome! The best contributions will consist of substitutions or configurations for classes/methods known to block the main thread during a typical app lifecycle.
 
-I would love to know if you are using SAExpandableButton in your app, send an email to [Salmaan Ahmed](mailto:salmaan.ahmed@hotmail.com)
+I would love to know if you are using SASlider in your app, send an email to [Salmaan Ahmed](mailto:salmaan.ahmed@hotmail.com)
