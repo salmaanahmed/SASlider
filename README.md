@@ -18,7 +18,7 @@ Multiple ways to input values into the slider.
 
 # Maven
 **Step 1.** Add the JitPack repository to your build file
-```
+``` xml
 <repositories>
     <repository>
         <id>jitpack.io</id>
@@ -27,7 +27,7 @@ Multiple ways to input values into the slider.
 </repositories>
 ```
 **Step 2.** Add the dependency
-```
+``` xml
 <dependency>
     <groupId>com.github.salmaanahmed</groupId>
     <artifactId>SASlider</artifactId>
@@ -37,7 +37,7 @@ Multiple ways to input values into the slider.
 
 # Gradle
 **Step 1.** Add the JitPack repository to your build file
-```
+``` gradle
 allprojects {
     repositories {
       ...
@@ -46,7 +46,7 @@ allprojects {
 }
 ```
 **Step 2.** Add the dependency
-```
+``` gradle
 dependencies {
   compile 'com.github.salmaanahmed:SASlider:0.1'
 }
@@ -57,7 +57,7 @@ If you prefer not to use either of the above mentioned dependency managers, you 
 # Getting Started
 # Using XML
 You can use SASlider in XML as following
-```
+``` xml
 <sasliderdemo.salmaan.ahmsal.com.saslider.SASlider
     android:layout_width="match_parent"
     android:layout_height="100dp"
@@ -79,7 +79,7 @@ Developers can set the slider type to decimal or integer. Set min max range and 
 
 # Using Kotlin
 You can create the slider programatically as well, see the example below.
-```
+``` kotlin
   val slider = SASlider(this@MainActivity)
   slider.sliderColor = Color.BLUE
   slider.min = 0.0
@@ -90,7 +90,7 @@ You can create the slider programatically as well, see the example below.
 ```
 # Getting value
 Developers can query the current value anytime in the slider using the following variable.
-```
+``` kotlin
 slider.selectedIndex
 ```
 
