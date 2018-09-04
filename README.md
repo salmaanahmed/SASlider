@@ -7,8 +7,10 @@ User can select values by inputting in text field above slider, slide the contro
 <br>
 <img height="400" src="https://github.com/salmaanahmed/SASlider/blob/master/slider-screen.png?raw=true" />
 <br>
+
 # Demonstration
 Multiple ways to input values into the slider.
+
 <br>
 <img height="400" src="https://github.com/salmaanahmed/SASlider/blob/master/slider-animation.gif?raw=true" />
 <br>
