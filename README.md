@@ -5,12 +5,12 @@ SASlider is lightweight cool looking custom slider control which enables the use
 User can select values by inputting in text field above slider, slide the control or tap anywhere on the slider to move it.
 
 <br>
-<img height="400" src="https://github.com/salmaanahmed/SAExpandableButton/blob/master/screenshots/Screenshot_ExpandableButton.png?raw=true" />
+<img height="400" src="https://github.com/salmaanahmed/SASlider/blob/master/slider-screen.png?raw=true" />
 <br>
 # Demonstration
-You can use any view as a child view for it.
+Multiple ways to input values into the slider.
 <br>
-<img height="400" src="https://github.com/salmaanahmed/SAExpandableButton/blob/master/screenshots/ExpandableButtonGif.gif?raw=true" />
+<img height="400" src="https://github.com/salmaanahmed/SASlider/blob/master/slider-animation.gif?raw=true" />
 <br>
 
 # Installation
